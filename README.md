@@ -2,7 +2,7 @@
 
 ## 📄 About
 
-Backend of a social network, where users can share relevant information about foods and recipes they have tried.
+Backend of a social media, where users can share relevant information about foods and recipes they have tried.
 
 ## 🔗 Deploy Link
 https://lammar-cookenu2.onrender.com
