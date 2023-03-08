@@ -1,96 +1,115 @@
 # Cookenu
 
-## 📄 Sobre
+## 📄 About
 
-Backend de uma rede social, na qual os usuários podem dividir informações relevantes sobre comidas e receitas que tenham experimentado. 
+Backend of a social network, where users can share relevant information about foods and recipes they have tried.
 
-## 🔗 Link do Deploy
+## 🔗 Deploy Link
 https://lammar-cookenu2.onrender.com
 
-## 🔗 Link para acessar os endpoints do Postman
+## 🔗 Link to access endpoints in Postman
 https://documenter.getpostman.com/view/22376488/2s93CHtZsA
 
-## 💻 Funcionalidades
+## 💻 Functionalities
 
 ### Sign Up
 
-- Cria um novo usuário. O email deve ser único, senão uma mensagem de erro irá aparecer e não irá criar.
-- O usuário deverá passar o name, email, password e role através do body.
-- Após criar o usuário, será gerado um token de autenticação.
+- Creates a new user. The email must be unique, otherwise an error message will appear and it will not be created.
+- The user must pass the name, email, password and role through the body.
+- After creating the user, an authentication token will be generated.
 
 ### Login
 
-- Faz o login do usuário na aplicação.
-- O usuário deverá passar o email e password de um usuário já cadastrado através do body.
-- Após o login, será gerado um token de autenticação.
+- Logs the user into the application.
+- The user must pass the email and password of an already registered user through the body.
+- After login, an authentication token will be generated.
 
 ### Create Recipe
 
-- Cria uma nova receita.
-- Para conseguir utilizar o endpoint, o usuário deve estar autenticado.
-- O usuário deverá passar title e description através do body.
+- Creates a new recipe.
+- To be able to use this endpoint, the user must be authenticated.
+- The user must pass title and description through the body.
 
 ### Follow Another User
 
-- Endpoint para começar a seguir outro usuário.
-- Para conseguir utilizar o endpoint, o usuário deve estar autenticado.
-- O usuário deverá passar o userToFollowId através do body.
+- Endpoint to start following another user.
+- To be able to use this endpoint, the user must be authenticated.
+- The user must pass the userToFollowId through the body.
 
 ### Unfollow Another User
 
-- Deixa de seguir outro usuário.
-- Para conseguir utilizar o endpoint, o usuário deve estar autenticado.
-- O usuário deverá passar o userToUnfollowId através do path params.
+- Unfollow another user.
+- To be able to use this endpoint, the user must be authenticated.
+- The user must pass the userToUnfollowId through the path params.
 
 ### Delete Recipe
 
-- Deleta uma receita.
-- Para conseguir utilizar o endpoint, o usuário deve estar autenticado.
-- Um usuário "normal" deve ser capaz de deletar uma receita própria dele e um usuário "admin" é capaz de deletar qualquer receita.
-- O usuário deverá passar o id da receita através do path params.
+- Deletes a recipe.
+- To be able to use this endpoint, the user must be authenticated.
+- A "normal" user should be able to delete his own recipe and an "admin" user is able to delete any recipe.
+- The user must pass the id of the recipe through the path params.
 
 ### Delete User
 
-- Deleta um usuário.
-- Para conseguir utilizar o endpoint, o usuário deve estar autenticado e o seu role deve ser "admin".
-- O usuário deverá passar o id do usuário através do path params.
+- Deletes a user.
+- To be able to use this endpoint, the user must be authenticated and his role must be "admin".
+- The user must pass the user id through the path params.
 
 ### Get Profile
 
-- Retorna as informações do usuário que está logado.
-- O usuário deve estar autenticado para utilizar o endpoint.
+- Returns the information of the user who is logged in.
+- The user must be authenticated to use the endpoint.
 
 ### Get Recipes Feed
 
-- Retorna as receitas criadas pelos usuários que segue.
-- O usuário deve estar autenticado para utilizar o endpoint.
+- Returns recipes created by users he follows.
+- The user must be authenticated to use the endpoint.
 
 ### Get User By Id
 
-- Retorna as informações do usuário desejado.
-- Para utilizar este endpoint, o usuário deve estar autenticado.
-- O id do usuário deve ser passado por path params.
+- Returns the information of a specific user.
+- To use this endpoint, the user must be authenticated.
+- The user id must be passed by path params.
 
 ### Get Recipe By Id
 
-- Retorna as informações da receita desejada.
-- Para utilizar este endpoint, o usuário deve estar autenticado.
-- O id da receita deve ser passado por path params.
+- Returns the information of a specific recipe.
+- To use this endpoint, the user must be authenticated.
+- The id of the recipe must be passed by path params.
 
 ### Edit Recipe
 
-- Edita uma receita.
-- Para utilizar este endpoint, o usuário deve estar autenticado.
-- Um usuário "normal" deve ser capaz de editar uma receita própria dele.
-- O usuário deverá passar title e description através do body.
+- Edit a recipe.
+- To use this endpoint, the user must be authenticated.
+- A "normal" user should be able to edit his own recipe.
+- The user must pass title and description through the body.
 
 ### Forgot Password
 
-- Este endpoint envia um e-mail para o usuário que esqueceu a sua senha com uma nova senha.
-- O usuário deve passar o email através do body.
+- This endpoint sends an email to the user who forgot his password with a new password.
+- The user must pass the email through the body.
 
-## 👩‍💻 Desenvolvedores:
+## ⚙️ Setup
 
-- João Vitor Gomes Lara Resende.
-- Rafael Gonçalves Quintanilha Guimarães.
-- Nei Luis Duarte Tavares Junior.
+Clone down this repository. You will need Node and npm installed globally on your machine.
+
+- Installation:
+
+```
+  $ npm install 
+```
+
+- To start the project:
+
+```
+  $ npm start
+```
+
+Now you can test using the requests.rest file.
+
+## 🛠 Technologies
+
+- Node.js.
+- TypeScript.
+- MySQL.
+
